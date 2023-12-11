@@ -10,6 +10,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.RadioButton
@@ -45,6 +48,8 @@ class MainActivity : ComponentActivity() {
                 MyOutLinedTextField()
                 MyButton()
                 MyGroupRadioButton()
+                MyFAB()
+                MyProgress()
             }
         }
     }
@@ -142,6 +147,25 @@ fun MyGroupRadioButton() {
 
         }
     }
+}
+
+@Composable
+fun MyFAB() {
+    FloatingActionButton(
+        onClick = { /*TODO*/ },
+        contentColor = colorResource(id = R.color.yellow),
+        content = { Text(text = "+")}
+    )
+}
+
+@Composable
+fun MyProgress(){
+    CircularProgressIndicator(
+        color = colorResource(id = R.color.red),
+        strokeWidth = 3.sdp
+    )
+    LinearProgressIndicator()
+
 }
 
 
